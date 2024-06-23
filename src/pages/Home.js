@@ -6,12 +6,11 @@ import WorkerList from "../components/WorkerList";
 
 import "../components/home.css";
 
-
 export default function Home() {
   const [querys] = useSearchParams();
   const [ar, setAr] = useState([]);
 
-  const{setWorker_ar} = useContext(AppContext);
+  const { setWorker_ar } = useContext(AppContext);
 
   useEffect(() => {
     const searchQ = querys.get("search") || "google";
